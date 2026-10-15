@@ -1,0 +1,362 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercicis de programació</title>
+</head>
+<body>
+
+<script>
+  // Menú principal per triar l'exercici
+  var opcio = prompt("Quin exercici vols provar? (Exemples: 13.1, 14.8, 15.1, 16.3, 17.4, 18.4...)");
+
+  switch (opcio) {
+
+    // Condicional simple if
+    case "13.1":
+      var n = Number(prompt("Introdueix un número:"));
+      if (n < 0) console.log("el número llegit és negatiu");
+      break;
+
+    case "13.2":
+      var n = Number(prompt("Introdueix un número:"));
+      if (n % 2 === 0) console.log("el número llegit és parell");
+      break;
+
+    case "13.3":
+      var n = Number(prompt("Introdueix un número:"));
+      if (n % 2 === 0) console.log("el número llegit és parell");
+      if (n % 2 !== 0) console.log("el número llegit és senar");
+      break;
+
+    case "13.4":
+      var a = Number(prompt("Primer número:"));
+      var b = Number(prompt("Segon número:"));
+      if (a > b) console.log(a);
+      if (b > a) console.log(b);
+      break;
+
+    case "13.5":
+      var a = Number(prompt("Primer número:"));
+      var b = Number(prompt("Segon número:"));
+      var c = Number(prompt("Tercer número:"));
+      if (a >= b && a >= c) console.log(a);
+      if (b > a && b >= c) console.log(b);
+      if (c > a && c > b) console.log(c);
+      break;
+
+    case "13.6":
+      var mes = Number(prompt("Número de mes (1-12):"));
+      if (mes === 1) console.log("Gener");
+      if (mes === 2) console.log("Febrer");
+      if (mes === 3) console.log("Març");
+      if (mes === 4) console.log("Abril");
+      if (mes === 5) console.log("Maig");
+      if (mes === 6) console.log("Juny");
+      if (mes === 7) console.log("Juliol");
+      if (mes === 8) console.log("Agost");
+      if (mes === 9) console.log("Setembre");
+      if (mes === 10) console.log("Octubre");
+      if (mes === 11) console.log("Novembre");
+      if (mes === 12) console.log("Desembre");
+      break;
+
+
+    // Condicional doble if else
+    case "14.1":
+      var n = Number(prompt("Introdueix un número:"));
+      if (n < 0) console.log("el número llegit és negatiu");
+      else console.log("el número llegit és positiu");
+      break;
+
+    case "14.2":
+      var n = Number(prompt("Introdueix un número:"));
+      if (n % 2 === 0) console.log("el número llegit és parell");
+      else console.log("el número llegit es senar");
+      break;
+
+    case "14.3":
+      var a = Number(prompt("Primer número:"));
+      var b = Number(prompt("Segon número:"));
+      if (a > b) console.log(a);
+      else console.log(b);
+      break;
+
+    case "14.4":
+      var a = Number(prompt("Primer número:"));
+      var b = Number(prompt("Segon número:"));
+      var c = Number(prompt("Tercer número:"));
+      if (a >= b && a >= c) console.log(a);
+      else if (b >= c) console.log(b);
+      else console.log(c);
+      break;
+
+    case "14.5":
+      var a = Number(prompt("Primer número:"));
+      var b = Number(prompt("Segon número:"));
+      var c = Number(prompt("Tercer número:"));
+      if (a <= b && b <= c) console.log(a, b, c);
+      else if (a <= c && c <= b) console.log(a, c, b);
+      else if (b <= a && a <= c) console.log(b, a, c);
+      else if (b <= c && c <= a) console.log(b, c, a);
+      else if (c <= a && a <= b) console.log(c, a, b);
+      else console.log(c, b, a);
+      break;
+
+    case "14.6":
+      var carnet = prompt("Tens carnet de conduir? (si/no)");
+      var taxa = Number(prompt("Valor alcoholèmia:"));
+      if (carnet === "si" && taxa < 0.25) console.log("Sí pot conduir");
+      else console.log("No pot conduir");
+      break;
+
+    case "13.7":
+      var a = Number(prompt("Primer número:"));
+      var b = Number(prompt("Segon número:"));
+      if (a > b) console.log(a - b);
+      else console.log(b - a);
+      break;
+
+    case "14.8":
+      var preu = Number(prompt("Quantitat a pagar:"));
+      if (preu >= 30) console.log("El cost total és de " + preu + "€ donat que el transport és gratis.");
+      else console.log("El preu total és: " + (preu + 4.95) + "€");
+      break;
+
+    case "14.9":
+      var tipus = prompt("Conus (c) o terrina (t)?");
+      var sabor = prompt("Sabor (Vainilla, Xocolata, Turró, Menta, Oreo, Crema, Gerds, Ametlles):");
+      var preuGelat = 0;
+      var err = false;
+      if (tipus === "c") preuGelat = 3.45;
+      else if (tipus === "t") preuGelat = 3.95;
+      else err = true;
+
+      if (sabor === "Vainilla" || sabor === "Xocolata") preuGelat += 0;
+      else if (sabor === "Turró" || sabor === "Menta" || sabor === "Oreo") preuGelat += 0.5;
+      else if (sabor === "Crema" || sabor === "Gerds" || sabor === "Ametlles") preuGelat += 1;
+      else err = true;
+
+      if (err) console.log("Error dades mal introduïdes");
+      else console.log(preuGelat);
+      break;
+
+
+    // Condicional múltiple switch
+    case "15.1":
+      var mes = Number(prompt("Número de mes (1-12):"));
+      switch (mes) {
+        case 1: console.log("Gener"); break;
+        case 2: console.log("Febrer"); break;
+        case 3: console.log("Març"); break;
+        case 4: console.log("Abril"); break;
+        case 5: console.log("Maig"); break;
+        case 6: console.log("Juny"); break;
+        case 7: console.log("Juliol"); break;
+        case 8: console.log("Agost"); break;
+        case 9: console.log("Setembre"); break;
+        case 10: console.log("Octubre"); break;
+        case 11: console.log("Novembre"); break;
+        case 12: console.log("Desembre"); break;
+      }
+      break;
+
+    case "15.2":
+      var tipus = prompt("Conus (c) o terrina (t)?");
+      var sabor = prompt("Sabor:");
+      var preuGelat = 0;
+      var err = false;
+      if (tipus === "c") preuGelat = 3.45;
+      else if (tipus === "t") preuGelat = 3.95;
+      else err = true;
+
+      switch (sabor) {
+        case "Vainilla":
+        case "Xocolata": break;
+        case "Turró":
+        case "Menta":
+        case "Oreo": preuGelat += 0.5; break;
+        case "Crema":
+        case "Gerds":
+        case "Ametlles": preuGelat += 1; break;
+        default: err = true;
+      }
+      if (err) console.log("Error dades mal introduïdes");
+      else console.log(preuGelat);
+      break;
+
+    case "15.3":
+      var dia = prompt("Dia de la setmana (l, m, x, j, v, s, d):");
+      switch (dia) {
+        case "l": case "m": case "x": case "j": case "v": console.log("Laborable"); break;
+        case "s": case "d": console.log("Festiu"); break;
+      }
+      break;
+
+
+    // Bucles for
+    case "16.1":
+      for (var i = 1; i <= 10; i++) console.log("Estem fent bucles");
+      break;
+
+    case "16.2":
+      for (var i = 5; i <= 20; i++) console.log(i);
+      break;
+
+    case "16.3":
+      var n = Number(prompt("Suma fins a N:"));
+      var suma = 0;
+      for (var i = 1; i <= n; i++) suma += i;
+      console.log(suma);
+      break;
+
+    case "16.4":
+      var n = Number(prompt("Factorial de N:"));
+      var fact = 1;
+      for (var i = 1; i <= n; i++) fact *= i;
+      console.log(fact);
+      break;
+
+    case "16.5":
+      var n = Number(prompt("Introdueix N:"));
+      var m = Number(prompt("Introdueix M:"));
+      var suma = 0;
+      for (var i = n; i <= m; i++) suma += i;
+      console.log(suma);
+      break;
+
+    case "16.6":
+      var n = Number(prompt("Suma parells fins a N:"));
+      var suma = 0;
+      for (var i = 2; i <= n; i += 2) suma += i;
+      console.log(suma);
+      break;
+
+    case "16.7":
+      var n = Number(prompt("Taula de multiplicar de N:"));
+      for (var i = 1; i <= 10; i++) console.log(n * i);
+      break;
+
+    case "16.8":
+      var n = Number(prompt("De N a 1:"));
+      for (var i = n; i >= 1; i--) console.log(i);
+      break;
+
+    case "16.9":
+      var n = Number(prompt("N asteriscos:"));
+      var ast = "";
+      for (var i = 1; i <= n; i++) ast += "*";
+      console.log(ast);
+      break;
+
+    case "16.10":
+      var n = Number(prompt("Piràmide d'asteriscos:"));
+      var ast = "";
+      for (var i = 1; i <= n; i++) {
+        ast += "*";
+        console.log(ast);
+      }
+      break;
+
+    case "16.11":
+      var n = Number(prompt("Introdueix N:"));
+      var m = Number(prompt("Introdueix M:"));
+      var terme = 0, suma = 0, serie = "";
+      for (var i = 1; i <= m; i++) {
+        terme = terme * 10 + n;
+        suma += terme;
+        serie += terme + " ";
+      }
+      console.log(serie);
+      console.log("La suma de la sèrie és: " + suma);
+      break;
+
+
+    // Bucles while
+    case "17.1":
+      var i = 1;
+      while (i <= 10) { console.log("Estem fent bucles"); i++; }
+      break;
+
+    case "17.2":
+      var i = 5;
+      while (i <= 20) { console.log(i); i++; }
+      break;
+
+    case "17.3":
+      var n = Number(prompt("De N a 1 (while):"));
+      while (n >= 1) { console.log(n); n--; }
+      break;
+
+    case "17.4":
+      var n = Number(prompt("Quantitat números Fibonacci:"));
+      var a = 1, b = 1, i = 1;
+      while (i <= n) {
+        console.log(a);
+        var seg = a + b;
+        a = b;
+        b = seg;
+        i++;
+      }
+      break;
+
+    case "17.5":
+      var n = Number(prompt("Introdueix N:"));
+      var m = Number(prompt("Introdueix M:"));
+      var i = 1, res = 0;
+      while (i <= m && res <= 999999) {
+        res = n * i;
+        console.log(res);
+        i++;
+      }
+      break;
+
+
+    // Bucles do while
+    case "18.1":
+      var i = 1;
+      do { console.log("Estem fent bucles"); i++; } while (i <= 10);
+      break;
+
+    case "18.2":
+      var i = 5;
+      do { console.log(i); i++; } while (i <= 20);
+      break;
+
+    case "18.3":
+      var n = Number(prompt("De N a 1 (do-while):"));
+      do { console.log(n); n--; } while (n >= 1);
+      break;
+
+    case "18.4":
+      var n = Number(prompt("Comprovar si N és primer:"));
+      var primer = true, i = 2;
+      if (n <= 1) primer = false;
+      else if (n > 2) {
+        do {
+          if (n % i === 0) primer = false;
+          i++;
+        } while (i < n && primer);
+      }
+      if (primer) console.log("És primer");
+      else console.log("No és primer");
+      break;
+
+    case "18.5":
+      var i = 1;
+      var max = Number(prompt("Introdueix el número 1 de 10:"));
+      do {
+        i++;
+        var num = Number(prompt("Introdueix el número " + i + " de 10:"));
+        if (num > max) max = num;
+      } while (i < 10);
+      console.log("El més gran és: " + max);
+      break;
+
+    default:
+      console.log("Opció no reconeguda o no introduïda.");
+  }
+</script>
+
+</body>
+</html>
