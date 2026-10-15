@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 1. Cabecera */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 35px 60px;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 28px;
+      letter-spacing: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    nav a {
+      margin-left: 35px;
+      text-decoration: none;
+      color: black;
+      font-size: 13px;
+      letter-spacing: 3px;
+    }
+
+    /* Carga de tus 3 capturas de pantalla */
+    .cap1 { background-image: url('Captura de pantalla 2026-10-15 a les 17.13.39.png'); background-repeat: no-repeat; }
+    .cap2 { background-image: url('Captura de pantalla 2026-10-15 a les 17.13.48.png'); background-repeat: no-repeat; }
+    .cap3 { background-image: url('Captura de pantalla 2026-10-15 a les 17.13.56.png'); background-repeat: no-repeat; }
+
+    /* 2. Portada principal (Toy Story 5) */
+    .hero {
+      width: 100%;
+      height: 80vh;
+      background-size: 100% 116.5%;
+      background-position: 0% 100%;
+    }
+
+    /* Contenedor central */
+    .container {
+      max-width: 1300px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* Banners horizontales (Gatto y Hoppers) */
+    .banner {
+      height: 350px;
+    }
+    .gatto   { background-size: 116% 258%; background-position: 52.5% 6%; }
+    .hoppers { background-size: 116% 258%; background-position: 52.5% 70.6%; }
+
+    /* Filas de 3 columnas */
+    .fila-3 {
+      display: flex;
+      gap: 15px;
+      height: 320px;
+      margin-bottom: 30px;
+    }
+    .fila-3 div { flex: 1; }
+
+    /* Recortes fila 1 (Ghost Market, Incredibles, Coco) */
+    .ghost       { background-size: 352% 581%; background-position: 10.1% 100%; }
+    .incredibles { background-size: 353% 581%; background-position: 50.5% 100%; }
+    .coco        { background-size: 352% 581%; background-position: 90.9% 100%; }
+
+    /* Sección Careers at Pixar */
+    .careers {
+      display: flex;
+      gap: 15px;
+      height: 500px;
+      margin-bottom: 30px;
+    }
+    .careers-izquierda {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .careers-izquierda div { flex: 1; }
+    .careers-derecha {
+      flex: 2;
+      position: relative;
+    }
+
+    .estudio-1     { background-size: 401.6% 370.4%; background-position: 9.2% 2.9%; }
+    .estudio-2     { background-size: 401.6% 371.7%; background-position: 9.2% 40.8%; }
+    .estudio-3     { background-size: 163.4% 183.2%; background-position: 83.5% 4.6%; }
+
+    /* Recortes fila 2 (Loving Dory, Win or Lose, Dream Productions) */
+    .dory  { background-size: 350.9% 259.7%; background-position: 9.7% 99.7%; }
+    .win   { background-size: 350.9% 259.7%; background-position: 50.3% 99.7%; }
+    .dream { background-size: 350.9% 259.7%; background-position: 91% 99.7%; }
+  </style>
+</head>
+<body>
+
+  <!-- CABECERA -->
+  <header>
+    <a href="#" class="logo">PIXAR</a>
+    <nav>
+      <a href="#">FILMS</a>
+      <a href="#">TECHNOLOGY</a>
+      <a href="#">CAREERS</a>
+      <a href="#">MORE</a>
+    </nav>
+  </header>
+
+  <!-- PORTADA TOY STORY 5 -->
+  <div class="hero cap1"></div>
+
+  <!-- CONTENIDO CENTRAL -->
+  <div class="container">
+
+    <!-- BANNERS GATTO Y HOPPERS -->
+    <div class="banner cap2 gatto"></div>
+    <div class="banner cap2 hoppers"></div>
+
+    <!-- PRIMERA FILA DE 3 -->
+    <div class="fila-3">
+      <div class="cap2 ghost"></div>
+      <div class="cap2 incredibles"></div>
+      <div class="cap2 coco"></div>
+    </div>
+
+    <!-- SECCIÓN CAREERS AT PIXAR -->
+    <div class="careers">
+      <div class="careers-izquierda">
+        <div class="cap3 estudio-1"></div>
+        <div class="cap3 estudio-2"></div>
+      </div>
+      <div class="careers-derecha cap3 estudio-3"></div>
+    </div>
+
+    <!-- SEGUNDA FILA DE 3 -->
+    <div class="fila-3">
+      <div class="cap3 dory"></div>
+      <div class="cap3 win"></div>
+      <div class="cap3 dream"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
